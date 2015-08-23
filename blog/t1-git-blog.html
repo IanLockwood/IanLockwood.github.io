@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <head>
-  <title>Your page title here</title>
+  <title>Ian's DBC Blog: Week 1</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
 </head>
 
 <main>
-  <h1>Post Title</h1>
-  <h2>The subtitle, if you want it</h2>
+  <h1>Week 1</h1>
+  <h2>Git, GitHub, and the Command Line</h2>
   <h4>Today's Date</h4>
 
   <section>
     <p>
-      Your first paragraph goes here. I'm using Web 2.0 Ipsum to add content. Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo. Nuvvo koofers oooooc voxy klout jaiku palantir flickr insala zinch napster oooj, airbnb mzinga vimeo yuntaa balihoo plickers whrrl edmodo appjet kippt. Yoono imvu hulu eduvant blekko imvu ebay voki napster skype, hipmunk zinch wesabe bubbli ning meebo bitly zlio. Fleck elgg ideeli disqus rovio zillow sifteo blyve jabber, bitly geni zoho foodzie qeyno twones klout jiglu, hipmunk jaiku balihoo plickers heekya eskobo yuntaa. Sococo whrrl plickers movity whrrl zinch voki nuvvo meebo, quora heroku unigo kno wufoo jibjab woopra, groupon yuntaa spock mzinga jumo meebo movity.
+      My first week at DBC is almost complete and I've learned a ton. For my own sake, and the sake of you, dear reader, I am going to walk through the basics of git and GitHub, as well as some git commands you'll need to use in the command line.
     </p>
-    <p>
-        Lijit groupon ning stypi eskobo blyve ning shopify oooooc, meebo groupon prezi ebay voxy bitly diigo. Spock ifttt skype hipmunk movity whrrl bebo oooj empressr, disqus insala palantir bitly dropio zimbra zinch oooooc etsy, klout spock insala quora omgpop trulia jibjab. Sifteo dogster ebay grockit geni scribd bitly ning unigo, plickers voki mzinga tumblr kaboodle mozy whrrl woopra udemy, foodzie joukuu elgg twitter shopify akismet rovio. Kosmix eduvant woopra dopplr balihoo ning bebo akismet, boxbe vimeo kosmix shopify zappos bitly geni loopt, qeyno disqus sococo squidoo wikia octopart.
-    </p>
-    <p>
-        Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
-    </p>
+  </section>
 
-      <!-- copy and paste as many sections as you want to add paragraphs -->
+  <section>
+    <p>
+        Git is an incredibly handy open source version control system. Sooooooooo... what is that? Version control software allows you to save and record many <i>versions</i> of a project as you work on it, and access those different versions whenever you like. You have <i>control</i> of all of those versions. Get it? Version. Control. Version control!
+    </p>
+    <p>
+        This is obviously very handy for any project where you might make a mistake or bad choice and want to go back, but it is especially handy for coding, where one rogue character can mess up an entire project. With git you can just go back to a working version and try again.
+    </p>
+  </section>
+
+  <section>
+    <p>
+        Git helps you keep track of changes with commit messages and the git log. With each submitted change, or <i>commit</i>, a good programmer submits a commit message that explains exactly what was done. These commits and their messages are always accessable via the git log, which shows every commit since the intial one. Pretty nifty!
+    </p>
+  </section>
+
+  <section>
+    <p>
+        Github is an awesome way to store, track, collaborate on, and change your code. There are many benefits to using GitHub. For one, your work and all of your commits now exist online, which will save you if your computer crashes. The interface is excellent, and accessing your commits is incredibly easy. The interface also allows you to see exactly what was changed when you submit changes by using a helpful red/- and green/+ comparison. But perhaps GitHub's greatest strength is that it allows you to work collaboratively with people around the world on your work and theirs. GitHub is a social networking site (like Facebook), and if you like, you can make your work public, allowing people to copy, change, and add to your work. All of this exists at GitHub.com. Check it out!
+    </p>
+  </section>
+
+  <section>
+    <p>
+      Here is my nifty guide to making changes to git/GitHub projects. The command line commands will only work if you have git set up, and this will be super confusing to true beginners. Come back once you've played around in git and GitHub a little bit!
+      <ol>
+      <li>Navigate to your repository in the command line using the cd command line</li>
+      <li>Create a branch: git co -b new-branch-name</li> 
+      <li>Make changes</li> 
+      <li>Check your git status: git status</li> 
+      <li>Add your files and changes to be commited: git add . (or the specific file name)</li> 
+      <li>Check your git status: git status</li> 
+      <li>Commit your changes and add a message: git commit -m "message"</li> 
+      <li>Check your git log: git log</li> 
+      <li>Navigate back to the master branch: git co master</li> 
+      <li>Pull the current master branch (in case a team member has made changes): git pull</li> 
+      <li>Navigate back to your new branch: git co new-branch-name</li> 
+      <li>Merge it with the master branch: git merge master</li> 
+      <li>Push your changes up to GitHub: git push origin new-branch-name</li> 
+      <li>Navigate to github.com</li> 
+      <li>Click pull request</li> 
+      <li>Confirm merge</li> 
+      <li>Delete the old branch (this is good orginizational practice): git branch -d new-branch-name</li>
+      </ol>
+    </p>
+  </section>
+
+  <section>
+    <p>
+        Finally, to share some personal observations from the week:
+        <ul>
+          <li>Git and GitHub rule.</li>
+          <li>Learning the command line was super intimidating. It looks so advanced and compicated! But it was faily simple, actually. I was glad to have some html knowledge and breeze through those few parts, because it was nice to feel a little ahead in one thing while wading through tons of new material.</li>
+          <li>Oh man, I type like a baby. Or hey, I used to! Before DBC, I was typing with 2 fingers on each hand, and I was going pretty quickly, but I looked down at the keyboard a lot and topped out at about 45 wpm. So, I've been making a concerted effort to do the typing lessons and type like an adult human. I'm already typing faster and I never look down at the keyboard. It's great!</li>
+        </ul>
+    </p>
+  </section>
+  <section>
+    <p>
+        Okay, that's it for me. See you next week!
+    </p>
+    <p>--Ian</p>
   </section>
 </main>
 
