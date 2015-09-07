@@ -1,0 +1,23 @@
+article {
+	background-color: #FFF8F0;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	margin-left: 10em;
+	margin-right: 10em;
+	border-style: solid;
+	border-color: #FFF8F0;
+	border-width: .5em;
+	border-radius: 1em;
+	border-color: #FFF8F0
+}
+
+footer {
+	display: block;
+	text-align: center;
+	margin: 0;
+}
+
+aside {
+	text-align: left;
+}
