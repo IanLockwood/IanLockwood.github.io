@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+	<title>Ian's DBC Blog</title>
+
+</head>
+
+<body>
+
+	<header><h1>Ian Lockwood</h1>
+	<h4>Developer</h4>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">About Me</a></li>
+			<li><a href="#">Resume and Contact</a></li>
+			<li><a href="blog/index.html">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+<br>
+
+	<article>
+	<h1>Arrays vs Hashes: Say what?</h1>
+	
+	<p>
+		This week in DBC Phase 0 we've dealt with a lot of arrays and hashes. But what are they? What makes them tick? What's the difference? And why might you use one over the other?
+	</p>
+
+	<p>
+		Well here's the difference:
+	</p>
+
+	<p>
+		<b>Arrays</b> are lists. They hold an ordered number of things. Here's what a ruby array might look like:
+		<pre><code>
+			very_cool_array = [1, 9, "Ian", "hello"]
+		</code></pre>
+		As you can see, the array is surrounded in brackets, can include numbers and strings, and is one-dimensional. It must start with a lowercase letter or underscore.
+		<br>
+		A value from the pair can be accessed by indexing the array, like so:
+		<pre><code>
+			puts very_cool_array[0]
+
+			puts very_cool_array[3]
+
+			1
+
+			"hello"
+		</code></pre>
+		You'll notice that in an array we start in position 0.
+	</p>
+<br>
+	<p>
+		<b>Hashes</b> are lists or directories where a key is assigned to a value. To use a very popular analogy, it's like a dictionary where the key is the word and the value is a definition. Hashes are two-dimensional. Like arrays, they must start with a lowercase letter or underscore, but hashes are usually surrounded in curly brackets - these: {}. Here's how you might make a hash:
+		<pre><code>
+			great_hash = { "Key" => "value", "fingers" => 10, , "toes" => "Nine, now." }
+		</code></pre>
+		or, using symbols:
+		<pre><code>
+			great_hash = { :Key => "value", :fingers => 10, , :toes => "Nine, now." }
+		</code></pre>
+		or, using the Hash.new method:
+		<pre><code>
+			great_hash = Hash.new
+			great_hash["Key"] = "value"
+		</code></pre>
+		As you can see, there are a few ways to do it. Hashes used to be unordered, but as of a recent update to Ruby, they are now ordered. 
+	</p>
+
+<br>
+	<p>
+		<b>So when would you want to use a hash and when would you want to use an array?</b>
+	</p>
+
+	<p>
+		Well it's case by case, but the differences inform us. Hashes are a great way to have parameters in functions (I can't take credit, I have to thank ruby-docs for that concise explanation). The pairs are a great way to represent data structures, and you can manipulate them. You could have a dictionary saved as a hash, or your personal schedule (maybe like this - {"10/1/15 8PM" => "Dance Contest"}), and manipulate and change it as you see fit.
+	</p>
+	<p>
+		Arrays, on the other hand, are a great, simple way to store data, and should be used if you really don't need a hash. The data in arrays is easier to manipulate quickly, and you can write arrays into methods much more easily. If you were thinking of using a hash and realize that you could use one key for all of the values, just make that key the name of an array and fill it with those values.
+	</p>
+	<p>
+		I'm getting a lot of hints from all of my readings that there are a lot of cool, vital, advanced functions of hashes, so I'm sure there are some other great ways you would want to use them. I'm sure I'll find out soon!
+	</p>
+	<p>
+		Until next week,
+		Ian
+	</p>
+
+	</article>
+
+	<br>
+
+	<footer> 
+	<ul>
+		<li><a href="#">&lt; Next</a></li>
+		<li><a href="#">Previous &gt;</a></li>
+	</ul>
+	</footer>
+
+</body>
+</html>
