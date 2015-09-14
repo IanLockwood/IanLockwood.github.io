@@ -28,3 +28,9 @@ pre {
 aside {
 	text-align: left;
 }
+
+blockquote {
+	text-align: left;
+	font-size: .8em;
+	font-style: italic;
+}
