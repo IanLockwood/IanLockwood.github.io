@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+	<title>Ian Lockwood: Enumerables</title>
+
+</head>
+
+<body>
+
+	<header><h1>Ian Lockwood</h1>
+	<h4>Developer</h4>
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">About Me</a></li>
+			<li><a href="#">Resume and Contact</a></li>
+			<li><a href="index.html">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+<br>
+
+	<article>
+	<h1>Enumerables - The <i>Cycle</i> Method</h1>
+
+	<p>
+		Oh enumerables, how strange and mysterious you are. That's fine though, enumerables. I will discover your secrets yet.
+	</p>
+
+	<p>
+		This week I looked at the enumerable method <i>cycle</i>. It's a great, useful, and actually pretty simple method.
+		<br>
+		Here's what Ruby Docs has to say about cycle:
+	</p>
+
+	<blockquote>
+		<p>"Calls block for each element of enum repeatedly n times or forever if none or nil is given. If a non-positive number is given or the collection is empty, does nothing. Returns nil if the loop has finished without getting interrupted.
+		</p><p>
+		#cycle saves elements in an internal array so changes to enum after the first pass have no effect.
+		</p><p>
+		If no block is given, an enumerator is returned instead."
+		</p>
+	</blockquote>
+
+	<p>
+		Okay, great. So what does that mean? Here's the syntax for cycle (words in ALLCAPS are placeholders describing what actually goes there):
+	</p>
+
+	<p>
+		<pre><code>
+			ARRAY.cycle(NUMBER OF TIMES) { |x| MANIPULATE x }
+		</code></pre>
+	</p>
+
+	<p>
+		Cycle does what its name implies - it cycles through an array (or other things, but let's not get into that now) and does something to it over and over. It will do it as many times as we tell it to, or if we don't give it a number, it will do it forever. Here's an example - say we wanted to print an array over and over forever. It might look like this:
+	</p>
+
+	<p>
+		<pre><code>
+			x = [1, 2, 3, 4]
+			array.cycle { |x| puts x }
+
+			output => 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4,
+					1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4,
+					1, 2, 3, 4, 1, 2, 3, 4, (FOREVER)
+		</code></pre>
+	</p>
+
+		<p>
+		Neat! But I assume we don't want a lot of infinite loops hanging around. Here's what happens if we feed cycle a number.
+	</p>
+
+	<p>
+		<pre><code>
+			x = [1, 2, 3, 4]
+			array.cycle(3) { |x| puts x }
+
+			output => 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4.
+		</code></pre>
+	</p>
+
+	<p>
+		Rad! Of course, you can do much more than just puts your array. That thing Ruby Docs told us - "#cycle saves elements in an internal array so changes to enum after the first pass have no effect." - that means that when you use cycle, the result is held in an internal array, so only the first pass of changes has an effect.
+	</p>
+
+	<p>
+		Thanks for reading!
+		--Ian
+	</p>
+
+	</article>
+
+	<br>
+
+	<footer> 
+	<ul>
+		<li><a href="#">&lt; Next</a></li>
+		<li><a href="#">Previous &gt;</a></li>
+	</ul>
+	</footer>
+
+</body>
+
+</html>
