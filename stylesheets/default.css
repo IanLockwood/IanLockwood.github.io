@@ -69,23 +69,33 @@ table {
 
 .ian img {
 	width: 31em;
+    background-color: #FFF8F0;
+	margin: .5em;
+		-webkit-box-shadow: 0 6px 3px #CCC6C0;
+        	-moz-box-shadow: 0 6px 3px #CCC6C0;
+                box-shadow: 0 6px 3px #CCC6C0;
+	border-style: solid;
+	border-width: .5em;
+	border-radius: 1em;
+	border-color: #FFF8F0
+
 }
 
 .page-links img {
 	width: 15em;
 	height: 9em;
-}
-
-.social-links img {
-	width: 11em;
-	height: 4em;
-}
-
-img {
-	background-color: #FFF8F0;
+    background-color: #FFF8F0;
 	margin: .5em;
+		-webkit-box-shadow: 0 5px 3px #CCC6C0;
+        	-moz-box-shadow: 0 5px 3px #CCC6C0;
+                box-shadow: 0 5px 3px #CCC6C0;
 	border-style: solid;
 	border-width: .5em;
 	border-radius: 1em;
 	border-color: #FFF8F0
+}
+
+.social-links img {
+	width: 7em;
+	margin: 1.5em;
 }
