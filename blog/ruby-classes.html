@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+	<title>Ian Lockwood: Ruby Classes</title>
+
+</head>
+
+<body>
+
+	<header><h1>Ian Lockwood</h1>
+	<h4>Developer</h4>
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">../about.html</a></li>
+			<li><a href="#">Resume and Contact</a></li>
+			<li><a href="index.html">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+<br>
+
+	<article>
+	<h1>Classes in Session</h1>
+
+	<p>
+		So, if you're reading this blog, I assume you're someone with Ruby experience, but just a little - or you're pretending to be - so you probably know that Ruby is an object oriented language. Strings, arrays, hashes - they're all objects. But what you may not know is that those objects are all instances of classes: the String class, the Array class, and of course, the Hash class.
+	</p>
+
+	<blockquote>
+		Note: Integers, floats, and a LOT of other things are objects/instances of classes, but let's stick to our three examples for conciseness.
+	</blockquote>
+
+	<p>
+		We've actually worked with classes a little bit already. Whenever we've created a string, array, or hash with the .new method, we've been calling that method on the class. You can tell by the capitalized first letter:
+	</p>
+
+	<p>
+	<pre><code>
+		String.new = ""
+		Array.new = []
+		Hash.new = {}
+	</code></pre>
+	</p>
+
+	<p>
+		Well that's great and all, but what am I getting at here? Why won't I just get to the point?
+	</p>
+
+	<p>
+		Fine, jeez.
+	</p>
+
+	<p>
+		<i>You can make your own classes.</i>
+	</p>
+
+	<p>
+		Saw whaaaaaaaaaaaaaa?
+	</p>
+
+	<p>
+		That's right - you can define your own classes, objects (which, remember, are instances of classes), and even methods to be run exclusively on an object of that class. Let's get to the nitty-gritty. How do you do it, and why?
+	</p>
+
+	<p>
+		<pre><code>
+			class Name
+
+			end
+
+			new_name = Name.new
+		</code></pre>
+	</p>
+
+	<p>
+		Congratulations! You made a class called "Name"! You even (almost) made an object that is an instance of that class!
+	</p>
+
+	<p>
+		...
+	</p>
+
+	<p>
+		Well, that wasn't very interesting. Of course, the details of and uses for custom classes are countless, but allow me to walk you through some of the basic and interesting ones.
+	</p>
+
+	<p>
+		<pre><code>
+			class Name
+
+				def initialize(name)
+
+				end
+
+			end
+
+			new_name = Name.new("Burt")
+		</code></pre>
+	</p>
+
+	<p>
+		Neat! We wrote a class specific method! Not that specific, mind you - initialize is a common, private method used to initialize the class with an argument. In this case, initialize grabs "Burt" for us, but doesn't do anything with it. Let's fix that.
+	</p>
+
+	<p>
+		<pre><code>
+			class Name
+
+				def initialize(name)
+					@name = name
+				end
+
+				def print
+					p @name
+				end
+
+			end
+
+			new_name = Name.new("Burt")
+
+			new_name.print
+
+			#=> "Burt"
+		</code></pre>
+	</p>
+
+	<p>
+		What's going on here? Well, we created an actual custom method, print, which is printing "Burt" for us. That's pretty cool. But I assume what you're huffing and puffing about is @name. Is that a variable? What's with the @ symbol? And if there's anything I know about local variables, it's that they CAN'T pass data between classes!!!
+	</p>
+
+	<p>
+		Woah, calm down! I didn't mean to get you all worked up. I'm sorry. But you're on to something - @name <i>is not</i> a local variable. It's an <b>instance variable</b>. Instance variables start with an @ symbol, and unlike local variables, which are scoped to a method, instance variables are scoped to a class, so you can share variables between connected methods in your class. Far out!
+	</p>
+
+	<p>
+		I won't unload too much on you today, but to finish up, let's have our class actually do something other than print.
+	</p>
+
+	<p>
+		<pre><code>
+			class Name
+
+				def initialize(name)
+					@name = name
+				end
+
+				def sh
+					@name = "SH" + @name
+				end
+
+				def print
+					p @name
+				end
+
+			end
+
+			new_name = Name.new("Burt")
+
+			new_name.sh
+			new_name.print
+
+			#=> "SHBurt"
+		</code></pre>
+	</p>
+
+	<p>
+		Awesome! You made Burt's name sound funny. More importantly, we assigned an instance variable in one method, reassigned it in another, and printed it in yet another. Pretty cool, huh?
+	</p>
+
+	<p>
+		There's a lot more to learn about classes, but I think you can see from even this tiny, simple example that the possibilities are endless. Let your imagination run wild!
+	</p>
+
+	<p>
+		--Ian
+	</p>
+
+	</article>
+
+	<br>
+
+	<footer> 
+	<ul>
+		<li><a href="#">&lt; Next</a></li>
+		<li><a href="#">Previous &gt;</a></li>
+	</ul>
+	</footer>
+
+</body>
+
+</html>
