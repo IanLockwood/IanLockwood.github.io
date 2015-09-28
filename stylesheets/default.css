@@ -56,6 +56,9 @@ article {
 	border-width: .5em;
 	border-radius: 1em;
 	border-color: #FFF8F0;
+	-webkit-box-shadow: 0 6px 3px #CCC6C0;
+        	-moz-box-shadow: 0 6px 3px #CCC6C0;
+                box-shadow: 0 6px 3px #CCC6C0;
 }
 
 a {
