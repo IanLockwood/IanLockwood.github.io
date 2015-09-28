@@ -39,6 +39,24 @@ li {
 	width: 10em;
 }
 
+article {
+	width: 80%;
+	max-width: 50em;
+	background-color: #FFF8F0;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	padding-top: -.5em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	border-style: solid;
+	border-color: #FFF8F0;
+	border-width: .5em;
+	border-radius: 1em;
+	border-color: #FFF8F0;
+}
 
 a {
 	display: block;
@@ -98,4 +116,8 @@ table {
 .social-links img {
 	width: 7em;
 	margin: 1.5em;
+}
+
+.reduce_space {
+	margin: -2em;
 }
