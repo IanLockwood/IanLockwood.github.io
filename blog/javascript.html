@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+
+	<title>Ian Lockwood: JavaScript and Ruby</title>
+
+</head>
+
+<body>
+
+	<header><h1>Ian Lockwood</h1>
+	<h4>Developer</h4>
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../projects/index.html">Projects</a></li>
+			<li><a href="../about.html">About Me</a></li>
+			<li><a href="#">Resume</a></li>
+			<li><a href="index.html">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+<br>
+
+	<article>
+	<h1>Ruby Hashes vs. JavaScript Objects</h1>
+
+	<p>Oh Javascript. How you tantalize me with your objects that look just like Ruby except slightly different. Every day you push me closer to the grave.
+	</p>
+
+	<p>
+	Here's the difference:
+	</p>
+	<p>
+	A Ruby hash...
+	</p>
+
+	<p>
+		looks like this:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				people_and_my_impressions_of_them = {
+				Ryan: "Totally lame",
+				Jan: "Super tough",
+				Alan: "Get this guy some deodorant",
+				Rick: "Great shorts but he wouldn't tell me where he got them"
+				}
+			</code>
+		</pre>
+	</p>
+
+	<p>
+	This is how you access one:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				people_and_my_impressions_of_them[:Jan]
+				#=> Super tough
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		And finally, here's how you add to one:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				people_and_my_impressions_of_them[:Kyle] = "What a guy!"
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		There are, of course, many different ways to do earch of those things. But I'll leave you with that for now so we can move onto JavaScript!
+	</p>
+
+	<p>
+		Here's what a JavaScript object looks like:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				var people_and_my_impressions_of_them = {
+				ryan: "Totally lame";
+				jan: "Super tough";
+				alan: "Get this guy some deodorant";
+				rick: "Great shorts but he wouldn't tell me where he got them";
+				}
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		Pretty similar, right? WRONG. LEAVE.
+	</p>
+
+	<p>
+		Sorry, I just... JavaScript can be frustrating, guys. Where was I? Ah yes, how to access them:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				console.log(people_and_my_impressions_of_them.jan)
+
+				or
+
+				console.log(people_and_my_impressions_of_them[jan])
+
+				#=> Super tough
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		Adding to one or changing one:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				people_and_my_impressions_of_them.mike = "What a snooze!"
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		And deleting from one:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				delete people_and_my_impressions_of_them.mike
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		Now this is all great, but the difference isn't all syntax. With Ruby hashes, you're creating a list of keys and values. You're doing the same with JavaScript, but in a way, a JavaScript object lends itself better to categories with values. This is because of the easy, custom functions that you define, like ".mike" above. As a result, you might use multiple JavaScript objects with descriptive values. Here's an example of what that might look like, and how you might manipulate them:
+	</p>
+
+	<p>
+		<pre>
+			<code>
+				var ian = {
+				name: "Ian";
+				age: 22;
+				opinion: "THE BEST"
+				};
+
+				var albert = {
+				name: "Albert";
+				age: "101";
+				opinion: "What an old fart"
+				};
+
+				var jan = {
+				name: "Jan"
+				age: "52"
+				opinion: "Seriously, she's the best."
+				};
+
+
+				ian.mood "Sad";
+				albert.opinion = "Rest in Peace";
+				jan.opinion = "alleged murderer";
+
+
+
+				#=> 
+				var ian = {
+				name: "Ian";
+				age: 22;
+				opinion: "THE BEST"
+				mood: "Sad"
+				};
+
+				var albert = {
+				name: "Albert";
+				age: "101";
+				opinion: "Rest in Peace"
+				};
+
+				var jan = {
+				name: "Jan"
+				age: "52"
+				opinion: "alleged murderer"
+				};
+
+			</code>
+		</pre>
+	</p>
+
+	<p>
+		In <i>my</i> opinion, the biggest difference between Ruby hashes and Javascript objects is this: Hashes are easy to make, whereas objects are easy to manipulate.
+	</p>
+
+	<p>
+		Thanks guys! See you next week.
+	</p>
+
+	</article>
+
+	<br>
+
+	<footer> 
+	<ul>
+		<li><a href="#">&lt; Next</a></li>
+		<li><a href="#">Previous &gt;</a></li>
+	</ul>
+	</footer>
+
+</body>
+
+</html>
