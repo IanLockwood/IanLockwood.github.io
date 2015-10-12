@@ -81,6 +81,14 @@ a:hover {
 	color: #C6D0EC;
 }
 
+.nohover {
+	pointer-events:none;
+}
+
+.nohover pre {
+	text-align: left;
+}
+
 nav {
 	display: inline;
 	text-align: center;

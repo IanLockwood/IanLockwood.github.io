@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+
+	<title>Ian Lockwood</title>
+
+</head>
+
+<body> 
+
+<header><h1>JavaScript Objects Cheat Sheet</h1>
+	<h4>Developer</h4>
+
+	<nav>
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="index.html">Projects</a></li>
+			<li><a href="../about.html">About Me</a></li>
+			<li><a href="2">Resume</a></li>
+			<li><a href="../blog/index.html">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+<br>
+<br>
+<br>
+
+<article>
+	<h2>Welcome to my Javascript Objects Cheat Sheet!</h2>
+	<p>This handy page will give you everything you need to know to get started with JavaScript objects. Some knowledge of JavaScript and programming principles is required to fully understand this guide.</p>
+<p>
+<a href="#basics">Basics</a>
+<br>
+<a href="#properties">Properties</a>
+<br>
+<a href="#methods">Methods</a>
+</p></article>
+
+<div class="nohover">
+
+<a name="basics"><article>
+	<h3>JavaScript Object Basics</h3>
+	<p>
+		In JavaScript, variables hold data values. Objects are also variables, but can contain many data values instead of just one. Here's a basic object:
+	</p>
+
+	<pre><code>
+		var ian = {
+			name: "Ian Lockwood",
+			birthday: "March 30, 1993",
+			age: 22
+		}
+	</code></pre>
+
+	<p>
+		As you can see, we can create a new object just as we would a variable, with the <code>var</code> keyword. We separate elements with commas, as you might with a ruby array or hash.
+	</p>
+
+	<p>
+		<code>name: "Ian Lockwood"</code> is a name:value pair known as a property. Properties are the most fundamental parts of objects, and we'll go into detail on them in the next section.
+	</p>
+</article></a> 
+
+
+
+<a name="properties"><article>
+
+	<h2>JavaScript Object Properties</h2>
+
+	<p>JavaScript objects are made up of properties, the key:value pairs that describe an object.</p>
+
+	<h3>Adding Properties</h3>
+
+	<p>Adding properties is as easy as writing them into the object in the syntax seen in the basics section. However, we can add properties without editing the original code by using the following syntax:</p>
+
+	<pre><code>
+		objectName.newProperty = value
+	</code></pre>
+
+	<h3>Deleting Properties</h3>
+
+	<p>
+		To delete properties, use the following syntax:
+	</p>
+
+	<pre><code>
+		delete objectName.property
+	</code></pre>
+
+	<h3>Accessing Properties</h3>
+
+	<p>
+		To access properties, use any of the following syntaxes:
+	</p>
+
+	<pre><code>
+		objectName.property
+
+		objectName["String Key"]
+
+		objectName[expression_or_variable]
+	</code></pre>
+
+	<h3>Looping Through Properties</h3>
+
+	<p>
+		To loop through an object's properties, you can use the handy for...in loop:
+	</p>
+
+	<pre><code>
+		for (property in objectName) {
+    			code block
+		}
+	</code></pre>
+
+</article></a> 
+
+
+
+<a name="methods"><article>
+
+	<h2>JavaScript Object Methods</h2>
+
+	<p>JavaScript object methods are one of the handiest components of JavaScript Objects. An object method is a property that contains a function.</p>
+
+	<pre><code>
+		var ian = {
+		method : function() { code block},
+		}
+	</code></pre>
+
+	<p>Pretty simple! And accessing and using objects is simple too. Just use the following syntax:</p>
+
+	<pre><code>
+		objectName.method()
+	</code></pre>
+
+	<p>
+		Don't forget to use those parentheses! If you do, JavaScript will return the function definition.
+	</p>
+
+</article></a> 
+
+<article>
+	<p>
+		This page was created with a lot of help from <a href="http://www.w3schools.com/">w3schools.com</a>
+	</p>
+</article>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="cheat_sheet_wireframe.png">
+
+</body>
+
+</html>
